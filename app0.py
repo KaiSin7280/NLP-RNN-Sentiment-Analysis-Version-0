@@ -3,9 +3,10 @@ import numpy as np
 import joblib
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.models import load_model
 
-# Load model
-model = joblib.load('rnn_sentiment_model.pkl')
+# Load the trained Keras model
+model = load_model('rnn_sentiment_model.h5')
 
 # Define tokenizer settings (should match training)
 max_words = 10000
